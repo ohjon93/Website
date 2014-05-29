@@ -1,4 +1,4 @@
-Website
+Jonathan Oh's Portfolio Website
 =======
 
-This is a portfolio website of my work and an overall overview of who I am.
+This website displays who I am, the different works I have done, and my resume.
