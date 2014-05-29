@@ -1,6 +1,6 @@
 jQuery(function($){
 
-var CHAKRA = window.CHAKRA || {};
+var WEBSITE = window.WEBSITE || {};
 
 /* ==================================================
    Mobile Navigation
@@ -8,7 +8,7 @@ var CHAKRA = window.CHAKRA || {};
 /* Clone Menu for use later */
 var mobileMenuClone = $('#menu').clone().attr('id', 'navigation-mobile');
 
-CHAKRA.mobileNav = function(){
+WEBSITE.mobileNav = function(){
 	var windowWidth = $(window).width();
 	
 	// Show Menu or Hide the Menu
@@ -26,7 +26,7 @@ CHAKRA.mobileNav = function(){
 }
 
 // Call the Event for Menu 
-CHAKRA.listenerMenu = function(){
+WEBSITE.listenerMenu = function(){
 	$('#mobile-nav').on('click', function(e){
 		$(this).toggleClass('open');
 		
@@ -46,16 +46,16 @@ CHAKRA.listenerMenu = function(){
    Slider Options
 ================================================== */
 
-CHAKRA.slider = function(){
+WEBSITE.slider = function(){
 	$.supersized({
 		// Functionality
-		slideshow               :   1,			// Slideshow on/off
-		autoplay				:	1,			// Slideshow starts playing automatically
+		slideshow               :   0,			// Slideshow on/off
+		autoplay				:	0,			// Slideshow starts playing automatically
 		start_slide             :   1,			// Start slide (0 is random)
 		stop_loop				:	0,			// Pauses slideshow on last slide
 		random					: 	0,			// Randomize slide order (Ignores start slide)
 		slide_interval          :   12000,		// Length between transitions
-		transition              :   2, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+		transition              :   0, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
 		transition_speed		:	300,		// Speed of transition
 		new_window				:	1,			// Image links open in new window/tab
 		pause_hover             :   0,			// Pause slideshow on hover
@@ -77,10 +77,7 @@ CHAKRA.slider = function(){
 		thumb_links				:	0,			// Individual thumb links for each slide
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:  	[			// Slideshow Images
-											{image : '_include/img/slider-images/image01.jpg', title : '<div class="slide-content">Chakra</div>', thumb : '', url : ''},
-											{image : '_include/img/slider-images/image02.jpg', title : '<div class="slide-content">Responsive Design</div>', thumb : '', url : ''},
-											{image : '_include/img/slider-images/image03.jpg', title : '<div class="slide-content">FullScreen Gallery</div>', thumb : '', url : ''},
-											{image : '_include/img/slider-images/image04.jpg', title : '<div class="slide-content">Showcase Your Work</div>', thumb : '', url : ''}  
+											{image : 'files/images/image01.jpg', title : '<div class="slide-content">Jonathan Oh</div>', thumb : '', url : ''},
 									],
 									
 		// Theme Options			   
@@ -96,7 +93,7 @@ CHAKRA.slider = function(){
    Navigation Fix
 ================================================== */
 
-CHAKRA.nav = function(){
+WEBSITE.nav = function(){
 	$('.sticky-nav').waypoint('sticky');
 }
 
@@ -105,7 +102,7 @@ CHAKRA.nav = function(){
    Filter Works
 ================================================== */
 
-CHAKRA.filter = function (){
+WEBSITE.filter = function (){
 	if($('#projects').length > 0){		
 		var $container = $('#projects');
 		
@@ -158,7 +155,7 @@ CHAKRA.filter = function (){
    FancyBox
 ================================================== */
 
-CHAKRA.fancyBox = function(){
+WEBSITE.fancyBox = function(){
 	if($('.fancybox').length > 0 || $('.fancybox-media').length > 0 || $('.fancybox-various').length > 0){
 		
 		$(".fancybox").fancybox({				
@@ -199,7 +196,7 @@ CHAKRA.fancyBox = function(){
    Contact Form
 ================================================== */
 
-CHAKRA.contactForm = function(){
+WEBSITE.contactForm = function(){
 	$("#contact-submit").on('click',function() {
 		$contact_form = $('#contact-form');
 		
@@ -224,45 +221,11 @@ CHAKRA.contactForm = function(){
 	});
 }
 
-
-/* ==================================================
-   Twitter Feed
-================================================== */
-
-CHAKRA.tweetFeed = function(){
-	
-	var valueTop = -64; // Margin Top Value
-	
-    $("#ticker").tweet({
-          modpath: '_include/js/twitter/',
-          username: "Bluxart", // Change this with YOUR ID
-          page: 1,
-          avatar_size: 0,
-          count: 10,
-		  template: "{text}{time}",
-		  filter: function(t){ return ! /^@\w+/.test(t.tweet_raw_text); },
-          loading_text: "loading ..."
-	}).bind("loaded", function() {
-	  var ul = $(this).find(".tweet_list");
-	  var ticker = function() {
-		setTimeout(function() {
-			ul.find('li:first').animate( {marginTop: valueTop + 'px'}, 500, 'linear', function() {
-				$(this).detach().appendTo(ul).removeAttr('style');
-			});	
-		  ticker();
-		}, 5000);
-	  };
-	  ticker();
-	});
-	
-}
-
-
 /* ==================================================
    Menu Highlight
 ================================================== */
 
-CHAKRA.menu = function(){
+WEBSITE.menu = function(){
 	$('#menu-nav, #menu-nav-mobile').onePageNav({
 		currentClass: 'current',
     	changeHash: false,
@@ -278,7 +241,7 @@ CHAKRA.menu = function(){
    Next Section
 ================================================== */
 
-CHAKRA.goSection = function(){
+WEBSITE.goSection = function(){
 	$('#nextsection').on('click', function(){
 		$target = $($(this).attr('href')).offset().top-30;
 		
@@ -291,7 +254,7 @@ CHAKRA.goSection = function(){
    GoUp
 ================================================== */
 
-CHAKRA.goUp = function(){
+WEBSITE.goUp = function(){
 	$('#goUp').on('click', function(){
 		$target = $($(this).attr('href')).offset().top-30;
 		
@@ -305,7 +268,7 @@ CHAKRA.goUp = function(){
 	Scroll to Top
 ================================================== */
 
-CHAKRA.scrollToTop = function(){
+WEBSITE.scrollToTop = function(){
 	var windowWidth = $(window).width(),
 		didScroll = false;
 
@@ -338,7 +301,7 @@ CHAKRA.scrollToTop = function(){
 ================================================== */
 
 // Fix Hover on Touch Devices
-CHAKRA.utils = function(){
+WEBSITE.utils = function(){
 	
 	$('.item-thumbs').bind('touchstart', function(){
 		$(".active").removeClass("active");
@@ -351,7 +314,7 @@ CHAKRA.utils = function(){
    Accordion
 ================================================== */
 
-CHAKRA.accordion = function(){
+WEBSITE.accordion = function(){
 	var accordion_trigger = $('.accordion-heading.accordionize');
 	
 	accordion_trigger.delegate('.accordion-toggle','click', function(event){
@@ -373,7 +336,7 @@ CHAKRA.accordion = function(){
    Toggle
 ================================================== */
 
-CHAKRA.toggle = function(){
+WEBSITE.toggle = function(){
 	var accordion_trigger_toggle = $('.accordion-heading.togglize');
 	
 	accordion_trigger_toggle.delegate('.accordion-toggle','click', function(event){
@@ -393,97 +356,15 @@ CHAKRA.toggle = function(){
    Tooltip
 ================================================== */
 
-CHAKRA.toolTip = function(){ 
+WEBSITE.toolTip = function(){ 
     $('a[data-toggle=tooltip]').tooltip();
-}
-
-/* ==================================================
-   Map
-================================================== */
-
-CHAKRA.map = function(){
-	if($('.map').length > 0)
-	{
-
-		$('.map').each(function(i,e){
-
-			$map = $(e);
-			$map_id = $map.attr('id');
-			$map_lat = $map.attr('data-mapLat');
-			$map_lon = $map.attr('data-mapLon');
-			$map_zoom = parseInt($map.attr('data-mapZoom'));
-			$map_title = $map.attr('data-mapTitle');
-			
-			
-			
-			var latlng = new google.maps.LatLng($map_lat, $map_lon);			
-			var options = { 
-				scrollwheel: false,
-				draggable: false, 
-				zoomControl: false,
-				disableDoubleClickZoom: false,
-				disableDefaultUI: true,
-				zoom: $map_zoom,
-				center: latlng,
-				mapTypeId: google.maps.MapTypeId.ROADMAP
-			};
-			
-			var styles = [ 
-							{
-							  stylers: [
-								{ hue: "#2F3238" },
-								{ saturation: -20 }
-							  ]
-							}, {
-								featureType: "road",
-								elementType: "geometry",
-								stylers: [
-									{ lightness: 100 },
-									{ visibility: "simplified" }
-							  ]
-							}, {
-								featureType: "road",
-								elementType: "labels",
-								stylers: [
-									{ visibility: "off" }
-							  ]
-							}
-						];
-			
-			var styledMap = new google.maps.StyledMapType(styles,{name: "Styled Map"});
-			
-			var map = new google.maps.Map(document.getElementById($map_id), options);
-		
-			var image = '_include/img/marker.png';
-			var marker = new google.maps.Marker({
-				position: latlng,
-				map: map,
-				title: $map_title,
-				icon: image
-			});
-			
-			map.mapTypes.set('map_style', styledMap);
-  			map.setMapTypeId('map_style');
-			
-			var contentString = '<p><strong>Company Name</strong><br>Address here</p>';
-       
-			var infowindow = new google.maps.InfoWindow({
-				content: contentString
-			});
-			
-			google.maps.event.addListener(marker, 'click', function() {
-      			infowindow.open(map,marker);
-    		});
-
-		});
-	}	
 }
 
 /* ==================================================
 	Init
 ================================================== */
 
-CHAKRA.slider();
+WEBSITE.slider();
 
 $(document).ready(function(){
 	// Call placeholder.js to enable Placeholder Property for IE9
@@ -512,26 +393,26 @@ $(document).ready(function(){
 		autoClose: true
 	});
 	
-	CHAKRA.nav();
-	CHAKRA.mobileNav();
-	CHAKRA.listenerMenu();
-	CHAKRA.menu();
-	CHAKRA.goSection();
-	CHAKRA.goUp();
-	CHAKRA.filter();
-	CHAKRA.fancyBox();
-	CHAKRA.contactForm();
-	CHAKRA.tweetFeed();
-	CHAKRA.scrollToTop();
-	CHAKRA.utils();
-	CHAKRA.accordion();
-	CHAKRA.toggle();
-	CHAKRA.toolTip();
-	CHAKRA.map();
+	WEBSITE.nav();
+	WEBSITE.mobileNav();
+	WEBSITE.listenerMenu();
+	WEBSITE.menu();
+	WEBSITE.goSection();
+	WEBSITE.goUp();
+	WEBSITE.filter();
+	WEBSITE.fancyBox();
+	WEBSITE.contactForm();
+	WEBSITE.tweetFeed();
+	WEBSITE.scrollToTop();
+	WEBSITE.utils();
+	WEBSITE.accordion();
+	WEBSITE.toggle();
+	WEBSITE.toolTip();
+	WEBSITE.map();
 });
 
 $(window).resize(function(){
-	CHAKRA.mobileNav();
+	WEBSITE.mobileNav();
 });
 
 });

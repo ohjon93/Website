@@ -1,12 +1,3 @@
-/*
-Theme Name: Chakra / Dark Version
-Theme URI: http://www.themes.alessioatzeni.com/html/chakra/
-Author: Alessio Atzeni
-Author URI: http://www.alessioatzeni.com
-Description: Responsive One Page HTML Template - Retina Ready
-Version: 1.0
-*/
-
 
 /* ==================================================
    Basic Styles
@@ -52,16 +43,8 @@ a:focus{
 	text-decoration:none;
 }
 
-a img {
-	border: none;
-}
-
 a > img {
 	vertical-align: bottom;	
-}
-
-img {
-	max-width: none;	
 }
 
 strong {
@@ -91,12 +74,12 @@ li {
 
 .align-left{
 	float:left;
-	margin:0 25px 0 0px!important;
+	margin:0 25px 0 0px;
 }
 
 .align-right{
 	float:right;
-	margin:0 0 0 25px!important;
+	margin:0 0 0 25px;
 }
 
 .text-align-left {
@@ -257,62 +240,44 @@ h3.spec {
 ================================================== */
 
 .margin-0{
-	margin-bottom:0 !important;
+	margin-bottom:0;
 }
 
 .margin-10{
-	margin-bottom:10px !important;
+	margin-bottom:10px;
 }
 
 .margin-15{
-	margin-bottom:15px !important;
+	margin-bottom:15px;
 }
 
 .margin-20{
-	margin-bottom:20px !important;
+	margin-bottom:20px;
 }
 
 .margin-30{
-	margin-bottom:30px !important;
+	margin-bottom:30px;
 }
 
 .margin-40{
-	margin-bottom:40px !important;
+	margin-bottom:40px;
 }
 
 .margin-50{
-	margin-bottom:50px !important;
+	margin-bottom:50px;
 }
 
 .margin-60{
-	margin-bottom:60px !important;
+	margin-bottom:60px;
 }
 
 .margin-70{
-	margin-bottom:70px !important;
+	margin-bottom:70px;
 }
 
 .margin-80{
-	margin-bottom:80px !important;
+	margin-bottom:80px;
 }
-
-/* ==================================================
-   Separator
-================================================== */
-
-.sep {	
-	margin: 0 0 70px;
-	text-align: center;
-}
-
-.sep .separator {
-	display: inline-block;
-	width: 24px;
-	height: 24px;
-	background: url(../img/seperator.png) no-repeat;
-	vertical-align: text-top;
-}
-
 /* ==================================================
    Home Slider
 ================================================== */
@@ -328,13 +293,9 @@ h3.spec {
 	width: 100%;
 	height: 100%;
 	background: #26292E;
-	opacity: 0.7;
+	opacity: 0;
 	filter: alpha(opacity=70);
 	z-index: 0;
-}
-
-#home-slider .container {
-	height: 100%;	
 }
 
 #home-slider .container .row {
@@ -359,139 +320,6 @@ h3.spec {
 	line-height: 1em;
 	text-transform: uppercase;
 	margin: 0;
-}
-
-#home-slider .control-nav {
-	position: absolute;
-	width: 100%;
-	background: #2F3238;
-	height: 50px;
-	bottom: 0;
-	z-index: 2;
-}
-
-#home-slider #nextslide,
-#home-slider #prevslide {
-	background-image: none;
-	background-color: #26292E;
-	display: inline-block;
-	margin: 0;
-	position: relative;
-	top: 0;
-	left: 0;
-	right: 0;
-	width: 50px;
-	height: 50px;
-	opacity: 1;
-	filter: alpha(opacity=100);
-	
-	-webkit-transition: background 0.1s linear 0s;	
-	   -moz-transition: background 0.1s linear 0s;
-		 -o-transition: background 0.1s linear 0s;
-		    transition: background 0.1s linear 0s;
-}
-
-#home-slider #nextslide {
-	margin-left: -3px;	
-}
-
-#home-slider #nextsection {
-	float:right;
-}
-
-#home-slider #nextslide:hover,
-#home-slider #prevslide:hover {
-	background-color:#DE5E60;
-}
-
-#home-slider #nextslide i,
-#home-slider #prevslide i {
-	font-size: 16px;
-	color: #FFFFFF;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	margin-top: -7px;
-	line-height: 1em;
-}
-
-#home-slider #nextslide i {
-	margin-left: -8px;	
-}
-
-#home-slider #prevslide i {
-	margin-left: -9px;	
-}
-
-#home-slider ul#slide-list {
-	top: 50%;
-	padding: 0;
-	margin:-6px 0 0 0;	
-}
-
-#home-slider ul#slide-list li {
-	margin-right: 12px;
-}
-
-#home-slider ul#slide-list li:last-child {
-	margin-right: 0;	
-}
-
-#home-slider ul#slide-list li a {
-	background-color: #6E7074;
-	background-image: none;
-	width: 12px;
-	height: 12px;
-	
-	-webkit-border-radius: 999px;
-	-moz-border-radius: 999px;
-	border-radius: 999px;	
-	
-	-webkit-transition: background 0.1s linear 0s;	
-	   -moz-transition: background 0.1s linear 0s;
-		 -o-transition: background 0.1s linear 0s;
-		    transition: background 0.1s linear 0s;
-}
-
-#home-slider ul#slide-list li a:hover {
-	background-color: #FFFFFF;	
-}
-
-#home-slider ul#slide-list li.current-slide a,
-#home-slider ul#slide-list li.current-slide a:hover {
-	background-color:#DE5E60;
-}
-
-#home-slider #nextsection {
-	background-color: #26292E;
-	margin: 0;
-	position: relative;
-	float:right;
-	width: 50px;
-	height: 50px;
-	
-	-webkit-transition: background 0.1s linear 0s;	
-	   -moz-transition: background 0.1s linear 0s;
-		 -o-transition: background 0.1s linear 0s;
-		    transition: background 0.1s linear 0s;
-}
-
-#home-slider #nextsection:hover {
-	background-color:#DE5E60;
-}
-
-#home-slider #nextsection i {
-	font-size: 16px;
-	color: #FFFFFF;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	margin-top: -7px;
-	line-height: 1em;
-}
-
-#home-slider #nextsection i {
-	margin-left: -7px;	
 }
 
 
@@ -521,33 +349,6 @@ header .sticky-nav.stuck {
 	top: 0;
 	left: 0;
 	z-index: 1001;
-}
-
-header #logo {
-	color: #FFFFFF;
-	float: left;
-	padding: 15px 0;
-	margin-left: 20px;
-}
-
-header #logo a {
-	background: url(../img/logo.png) no-repeat;
-	width: 96px;
-	height: 30px;
-	text-indent: -9999px;
-	display: block;
-	opacity: 1;
-	filter: alpha(opacity=100);
-	
-	-webkit-transition: opacity 0.25s ease-in-out 0s;	
-	   -moz-transition: opacity 0.25s ease-in-out 0s;
-		 -o-transition: opacity 0.25s ease-in-out 0s;
-		    transition: opacity 0.25s ease-in-out 0s;	
-}
-
-header #logo a:hover {
-	opacity: 0.65;
-	filter: alpha(opacity=65);	
 }
 
 nav#menu {
@@ -864,41 +665,6 @@ nav#menu #menu-nav li a:hover {
 	filter: alpha(opacity=100);
 }
 
-.social-icons {
-	margin: 0;
-	padding: 0;
-}
-
-.social-icons li {
-	display: inline-block;
-	margin-left: 15px;	
-}
-
-.social-icons li:first-child {
-	margin-left: 0;
-}
-
-.social-icons li a{
-	color: #FFFFFF;
-	font-size: 16px;
-	line-height: 1em;
-	width: 16px;
-	height: 16px;
-	
-	opacity: 0.3;
-	filter: alpha(opacity=30);
-	
-	-webkit-transition: opacity 0.1s linear 0s;	
-	   -moz-transition: opacity 0.1s linear 0s;
-		 -o-transition: opacity 0.1s linear 0s;
-		    transition: opacity 0.1s linear 0s;
-}
-
-.social-icons li a:hover{
-	opacity: 1;
-	filter: alpha(opacity=100);
-}
-
 /* ==================================================
    Big Blockquote
 ================================================== */
@@ -943,90 +709,6 @@ nav#menu #menu-nav li a:hover {
 	color: #FFFFFF;
 	font-size: 60px;
 	line-height: 160px;	
-}
-
-
-/* ==================================================
-   Map
-================================================== */
-
-#map-area {
-	width: 100%;	
-}
-
-.map {
-	height: 600px;	
-}
-
-/* ==================================================
-   Blog Section
-================================================== */
-
-.post {
-	border-top: 1px dashed #3C3F45;
-    margin-top: 50px;
-    padding-top: 60px;
-    position: relative;
-}
-
-.post:first-child {
-	border-top: none;
-	margin: 0;
-	padding: 0;	
-}
-
-.post-thumb {
-	margin-bottom: 30px;	
-}
-
-.post-thumb a {
-	position: relative;
-	display: block;	
-}
-
-.post-thumb img {
-	width: 100%;	
-}
-
-.entry-title,
-.entry-title a {
-	font-size: 36px;
-	font-weight: 300;
-	line-height: 1.5em;
-	color: #FFFFFF;
-	margin-bottom: 5px;
-}
-
-.entry-title a:hover {
-	color: #DE5E60;
-}
-
-.entry-meta, 
-.entry-meta a {
-    color: #FFFFFF;
-    font-size: 12px;
-    font-weight: 300;
-    text-transform: uppercase;
-}
-
-.entry-meta a:hover {
-	color: #DE5E60;
-}
-
-.entry-meta {
-    margin-bottom: 20px;
-}
-
-.entry-meta .divider {
-    margin: 0 6px;
-}
-
-.entry-content .more-link {
-	display: block;	
-}
-
-.entry-meta.entry-footer {
-    padding-top: 20px;
 }
 
 /* ==================================================
@@ -1197,57 +879,6 @@ nav#menu #menu-nav li a:hover {
 }
 
 /* ==================================================
-   Navigation Blog
-================================================== */
-
-.navigation {
-    border-top: 1px dashed #3C3F45;
-    font-size: 14px;
-    margin: 50px 0 55px;
-    padding-top: 100px;
-    text-align: center;
-}
-
-.navigation .prev, 
-.navigation .next {
-	background-color: #2F3238;
-	color: #FFFFFF;
-	font-weight: 400;
-	display: inline-block;
-	margin: 2px 1px;
-	position: relative;
-	padding: 10px 24px;
-	
-	-webkit-transition: background 0.1s linear 0s;	
-	   -moz-transition: background 0.1s linear 0s;
-		 -o-transition: background 0.1s linear 0s;
-		    transition: background 0.1s linear 0s;
-}
-
-.navigation .number {
-	background-color: #2F3238;
-	display: inline-block;
-	margin: 1px;
-	position: relative;
-	color: #FFFFFF;
-	font-weight: 400;
-	padding: 10px 24px;
-		
-	-webkit-transition: background 0.1s linear 0s;	
-	   -moz-transition: background 0.1s linear 0s;
-		 -o-transition: background 0.1s linear 0s;
-		    transition: background 0.1s linear 0s;
-}
-
-.navigation .prev:hover, 
-.navigation .next:hover,
-.navigation .number:hover,
-.navigation .current {
-	background-color:#DE5E60;
-}
-
-
-/* ==================================================
    Contact Section
 ================================================== */
 
@@ -1343,50 +974,6 @@ nav#menu #menu-nav li a:hover {
 #response {
 	margin-top: 20px;
 	color: #FFFFFF;
-}
-
-
-/* ==================================================
-   Twitter Feed
-================================================== */
-
-#twitter-feed {
-	padding: 100px 0 90px;
-	text-align: center;	
-}
-
-#twitter-feed .follow {
-	position: absolute;
-	bottom: 30px;
-	left: 50%;
-	margin-left: -8px;
-	font-size: 16px;	
-}
-
-#ticker .tweet_list {
-	margin: 0;
-	padding: 0;
-	height: 64px;
-	list-style: none;
-	overflow-y: hidden;	
-}
-
-#ticker .tweet_list li {
-	font-size: 18px;
-	height: 64px;
-	line-height: 28px;
-	overflow: hidden;
-}
-
-#ticker .tweet_list .tweet_time a {
-	color: #7f8289;
-	font-size: 14px;
-	font-style: italic;
-	margin-left: 10px;	
-}
-
-#ticker .tweet_list .tweet_time a:hover {
-	color: #FFFFFF;	
 }
 
 
@@ -1501,46 +1088,6 @@ footer .credits {
 }
 
 /* ==================================================
-   Back to Top
-================================================== */
-
-#back-to-top {
-	display: none;
-	background-color: #3C3F45;
-	margin: 0;
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	width: 50px;
-	height: 50px;
-	z-index: 99;
-	
-	-webkit-transition: background 0.1s linear 0s;	
-	   -moz-transition: background 0.1s linear 0s;
-		 -o-transition: background 0.1s linear 0s;
-		    transition: background 0.1s linear 0s;
-}
-
-#back-to-top:hover {
-	background-color:#DE5E60;
-}
-
-#back-to-top i {
-	font-size: 16px;
-	color: #FFFFFF;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	margin-top: -7px;
-	line-height: 1em;
-}
-
-#back-to-top i {
-	margin-left: -7px;	
-}
-
-
-/* ==================================================
    Isotope Filtering
 ================================================== */
 
@@ -1580,29 +1127,4 @@ footer .credits {
       -ms-transition-property:     -ms-transform, opacity;
        -o-transition-property:      -o-transform, opacity;
           transition-property:         transform, opacity;
-}
-
-/**** disabling Isotope CSS3 transitions ****/
-
-.isotope.no-transition,
-.isotope.no-transition .isotope-item,
-.isotope .isotope-item.no-transition {
-  -webkit-transition-duration: 0s;
-     -moz-transition-duration: 0s;
-      -ms-transition-duration: 0s;
-       -o-transition-duration: 0s;
-          transition-duration: 0s;
-}
-
-/* End: Recommended Isotope styles */
-
-
-
-/* disable CSS transitions for containers with infinite scrolling*/
-.isotope.infinite-scrolling {
-  -webkit-transition: none;
-     -moz-transition: none;
-      -ms-transition: none;
-       -o-transition: none;
-          transition: none;
 }
